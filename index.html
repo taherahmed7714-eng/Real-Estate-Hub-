@@ -1,246 +1,17 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Real Estate Hub</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Tahoma, sans-serif;
-      background: #f5f7fa;
-      color: #172033;
-    }
-
-    header {
-      background: #101828;
-      color: white;
-      text-align: center;
-      padding: 25px;
-    }
-
-    header h1 {
-      margin: 0 0 10px;
-    }
-
-    .hero {
-      background: #344054;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .hero h2 {
-      font-size: 30px;
-    }
-
-    .search {
-      max-width: 900px;
-      margin: 30px auto 0;
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    select,
-    input,
-    button {
-      padding: 14px;
-      border-radius: 8px;
-      font-size: 16px;
-      border: 1px solid #ddd;
-      flex: 1;
-      min-width: 180px;
-    }
-
-    button {
-      background: #1570ef;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    .title {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .categories,
-    .properties {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-bottom: 50px;
-    }
-
-    .category,
-    .property {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    }
-
-    .icon {
-      font-size: 45px;
-    }
-
-    .price {
-      color: #1570ef;
-      font-size: 20px;
-      font-weight: bold;
-      margin: 15px 0;
-    }
-
-    footer {
-      background: #101828;
-      color: white;
-      text-align: center;
-      padding: 30px;
-    }
-
-    @media (max-width: 700px) {
-      .categories,
-      .properties {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h2 {
-        font-size: 24px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <h1>Real Estate Hub</h1>
-  <p>منصة متخصصة في العقارات التجارية والإدارية في مصر</p>
-</header>
-
-<section class="hero">
-  <h2>ابحث عن عقارك التجاري أو الإداري</h2>
-  <p>محلات - مكاتب - عيادات - وحدات تجارية وإدارية</p>
-
-  <div class="search">
-    <select>
-      <option>نوع العملية</option>
-      <option>للبيع</option>
-      <option>للإيجار</option>
-    </select>
-
-    <select>
-      <option>نوع العقار</option>
-      <option>محل تجاري</option>
-      <option>مكتب إداري</option>
-      <option>عيادة</option>
-      <option>وحدة تجارية</option>
-    </select>
-
-    <input type="text" placeholder="اكتب المنطقة أو اسم المشروع">
-
-    <button onclick="searchProperty()">بحث</button>
-  </div>
-</section>
-
-<div class="container">
-
-  <div class="title">
-    <h2>تصفح العقارات</h2>
-    <p>اختر نوع العقار الذي تبحث عنه</p>
-  </div>
-
-  <div class="categories">
-
-    <div class="category">
-      <div class="icon">🏢</div>
-      <h3>مكاتب إدارية</h3>
-    </div>
-
-    <div class="category">
-      <div class="icon">🏪</div>
-      <h3>محلات تجارية</h3>
-    </div>
-
-    <div class="category">
-      <div class="icon">🏥</div>
-      <h3>عيادات</h3>
-    </div>
-
-  </div>
-
-  <div class="title">
-    <h2>عقارات مميزة</h2>
-  </div>
-
-  <div class="properties">
-
-    <div class="property">
-      <div class="icon">🏢</div>
-      <h3>مكتب إداري مميز</h3>
-      <p>📍 القاهرة الجديدة - التجمع الخامس</p>
-      <p>📐 المساحة: 180 متر</p>
-      <div class="price">5,500,000 جنيه</div>
-      <button>تواصل مع المعلن</button>
-    </div>
-
-    <div class="property">
-      <div class="icon">🏪</div>
-      <h3>محل تجاري</h3>
-      <p>📍 العاصمة الإدارية الجديدة</p>
-      <p>📐 المساحة: 120 متر</p>
-      <div class="price">80,000 جنيه شهريًا</div>
-      <button>تواصل مع المعلن</button>
-    </div>
-
-    <div class="property">
-      <div class="icon">🏥</div>
-      <h3>عيادة طبية</h3>
-      <p>📍 الشيخ زايد - الجيزة</p>
-      <p>📐 المساحة: 100 متر</p>
-      <div class="price">35,000 جنيه شهريًا</div>
-      <button>تواصل مع المعلن</button>
-    </div>
-
-  </div>
-
-</div>
-
-<footer>
-  <h3>Real Estate Hub</h3>
-  <p>منصة العقارات التجارية والإدارية في مصر</p>
-  <p>© 2026 جميع الحقوق محفوظة</p>
-</footer>
-
-<script>
-  function searchProperty() {
-    alert("سيتم تفعيل البحث عن العقارات قريبًا");
-  }
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Real Estate Hub</title>
 
 <style>
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, Tahoma, sans-serif;
@@ -255,70 +26,111 @@ header {
   text-align: center;
 }
 
+header h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+header p {
+  margin: 0;
+  color: #d0d5dd;
+}
+
 nav {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 12px;
 }
 
 .hero {
   background: #344054;
   color: white;
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
 .hero h2 {
-  font-size: 30px;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  max-width: 950px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #1570ef;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .container {
   max-width: 1100px;
-  margin: 40px auto;
+  margin: 50px auto;
   padding: 20px;
 }
 
-.add-property {
-  background: #1570ef;
-  color: white;
-  padding: 15px 25px;
-  border: none;
-  border-radius: 8px;
-  font-size: 17px;
-  cursor: pointer;
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.form-box {
-  display: none;
+.section-title h2 {
+  font-size: 28px;
+}
+
+.section-title p {
+  color: #667085;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.category {
   background: white;
-  padding: 25px;
+  padding: 30px 15px;
+  text-align: center;
   border-radius: 12px;
-  margin-top: 30px;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
-.form-box input,
-.form-box select,
-.form-box textarea {
-  width: 100%;
-  padding: 13px;
-  margin: 8px 0 15px;
-  border: 1px solid #ddd;
-  border-radius: 7px;
-  box-sizing: border-box;
-}
-
-.form-box button {
-  background: #12b76a;
-  color: white;
-  border: none;
-  padding: 14px 25px;
-  border-radius: 7px;
-  cursor: pointer;
+.category-icon {
+  font-size: 45px;
 }
 
 .properties {
@@ -334,156 +146,514 @@ nav a {
   box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
-.icon {
-  font-size: 45px;
+.property-icon {
+  height: 150px;
+  background: #e4e7ec;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
+}
+
+.property h3 {
+  margin-top: 20px;
+}
+
+.property p {
+  color: #667085;
 }
 
 .price {
   color: #1570ef;
   font-size: 20px;
   font-weight: bold;
+  margin: 15px 0;
+}
+
+.add-button {
+  background: #12b76a;
+  margin-top: 15px;
+}
+
+.form-box {
+  display: none;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 50px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.form-box h2 {
+  margin-top: 0;
+}
+
+.form-box label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-box button {
+  margin-top: 20px;
+  background: #12b76a;
 }
 
 footer {
   background: #101828;
   color: white;
   text-align: center;
-  padding: 30px;
-  margin-top: 50px;
+  padding: 35px;
+  margin-top: 60px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+
+  .search-box {
+    grid-template-columns: 1fr;
+  }
+
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .properties {
     grid-template-columns: 1fr;
   }
+
 }
+
+@media (max-width: 500px) {
+
+  .categories {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 25px;
+  }
+
+}
+
 </style>
+
 </head>
+
 <body>
 
 <header>
-  <h1>Real Estate Hub</h1>
-  <p>منصة متخصصة في العقارات التجارية والإدارية في مصر</p>
 
-  <nav>
-    <a href="#properties">العقارات</a>
-    <a href="#add">أضف عقارك</a>
-  </nav>
+<h1>Real Estate Hub</h1>
+
+<p>
+منصة متخصصة في العقارات التجارية والإدارية في مصر
+</p>
+
+<nav>
+
+<a href="#home">الرئيسية</a>
+
+<a href="#properties">العقارات</a>
+
+<a href="#add-property">أضف عقارك</a>
+
+</nav>
+
 </header>
 
-<section class="hero">
-  <h2>ابحث عن عقارك التجاري أو الإداري</h2>
-  <p>محلات - مكاتب - عيادات - وحدات تجارية وإدارية</p>
 
-  <button class="add-property" onclick="showForm()">
-    + أضف عقارك
-  </button>
-</section>
+<section class="hero" id="home">
 
-<div class="container">
+<h2>
+ابحث عن عقارك التجاري أو الإداري
+</h2>
 
-  <div id="add" class="form-box">
+<p>
+محلات - مكاتب - عيادات - وحدات تجارية وإدارية
+</p>
 
-    <h2>أضف عقارك</h2>
+<div class="search-box">
 
-    <label>نوع العقار</label>
+<select>
 
-    <select>
-      <option>اختر نوع العقار</option>
-      <option>مكتب إداري</option>
-      <option>محل تجاري</option>
-      <option>عيادة</option>
-      <option>وحدة تجارية</option>
-    </select>
+<option>نوع العملية</option>
 
-    <label>نوع العملية</label>
+<option>للبيع</option>
 
-    <select>
-      <option>للبيع</option>
-      <option>للإيجار</option>
-    </select>
+<option>للإيجار</option>
 
-    <label>المنطقة</label>
+</select>
 
-    <input type="text" placeholder="مثال: التجمع الخامس">
 
-    <label>اسم المشروع</label>
+<select>
 
-    <input type="text" placeholder="اسم المشروع">
+<option>نوع العقار</option>
 
-    <label>المساحة بالمتر</label>
+<option>مكتب إداري</option>
 
-    <input type="number" placeholder="مثال: 150">
+<option>محل تجاري</option>
 
-    <label>السعر</label>
+<option>عيادة</option>
 
-    <input type="number" placeholder="السعر بالجنيه المصري">
+<option>وحدة تجارية</option>
 
-    <label>رقم الهاتف</label>
+</select>
 
-    <input type="tel" placeholder="رقم الهاتف">
 
-    <label>تفاصيل العقار</label>
+<input
+type="text"
+placeholder="اكتب المنطقة أو اسم المشروع"
+>
 
-    <textarea rows="5" placeholder="اكتب تفاصيل العقار"></textarea>
 
-    <button onclick="submitProperty()">
-      إرسال العقار للمراجعة
-    </button>
+<button onclick="searchProperty()">
 
-  </div>
+بحث
 
-  <h2 id="properties">العقارات المميزة</h2>
-
-  <div class="properties">
-
-    <div class="property">
-      <div class="icon">🏢</div>
-      <h3>مكتب إداري مميز</h3>
-      <p>📍 القاهرة الجديدة - التجمع الخامس</p>
-      <p>📐 المساحة: 180 متر</p>
-      <div class="price">5,500,000 جنيه</div>
-    </div>
-
-    <div class="property">
-      <div class="icon">🏪</div>
-      <h3>محل تجاري</h3>
-      <p>📍 العاصمة الإدارية الجديدة</p>
-      <p>📐 المساحة: 120 متر</p>
-      <div class="price">80,000 جنيه شهريًا</div>
-    </div>
-
-    <div class="property">
-      <div class="icon">🏥</div>
-      <h3>عيادة طبية</h3>
-      <p>📍 الشيخ زايد - الجيزة</p>
-      <p>📐 المساحة: 100 متر</p>
-      <div class="price">35,000 جنيه شهريًا</div>
-    </div>
-
-  </div>
+</button>
 
 </div>
 
+</section>
+
+
+<div class="container">
+
+
+<div
+class="form-box"
+id="add-property"
+>
+
+<h2>
+أضف عقارك
+</h2>
+
+<p>
+أدخل بيانات العقار ليتم مراجعته قبل النشر.
+</p>
+
+
+<label>
+نوع العقار
+</label>
+
+<select>
+
+<option>اختر نوع العقار</option>
+
+<option>مكتب إداري</option>
+
+<option>محل تجاري</option>
+
+<option>عيادة</option>
+
+<option>وحدة تجارية</option>
+
+</select>
+
+
+<label>
+نوع العملية
+</label>
+
+<select>
+
+<option>للبيع</option>
+
+<option>للإيجار</option>
+
+</select>
+
+
+<label>
+المنطقة
+</label>
+
+<input
+type="text"
+placeholder="مثال: التجمع الخامس"
+>
+
+
+<label>
+اسم المشروع
+</label>
+
+<input
+type="text"
+placeholder="اسم المشروع"
+>
+
+
+<label>
+المساحة بالمتر
+</label>
+
+<input
+type="number"
+placeholder="مثال: 150"
+>
+
+
+<label>
+السعر
+</label>
+
+<input
+type="number"
+placeholder="السعر بالجنيه المصري"
+>
+
+
+<label>
+رقم الهاتف
+</label>
+
+<input
+type="tel"
+placeholder="رقم الهاتف"
+>
+
+
+<label>
+تفاصيل العقار
+</label>
+
+<textarea
+rows="5"
+placeholder="اكتب تفاصيل العقار"
+></textarea>
+
+
+<button onclick="submitProperty()">
+
+إرسال العقار للمراجعة
+
+</button>
+
+</div>
+
+
+<div class="section-title">
+
+<h2>
+تصفح حسب نوع العقار
+</h2>
+
+<p>
+اختر نوع العقار الذي تبحث عنه
+</p>
+
+</div>
+
+
+<div class="categories">
+
+
+<div class="category">
+
+<div class="category-icon">
+🏢
+</div>
+
+<h3>
+مكاتب إدارية
+</h3>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🏪
+</div>
+
+<h3>
+محلات تجارية
+</h3>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🏥
+</div>
+
+<h3>
+عيادات
+</h3>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🏬
+</div>
+
+<h3>
+وحدات تجارية
+</h3>
+
+</div>
+
+
+</div>
+
+
+<div
+class="section-title"
+id="properties"
+>
+
+<h2>
+عقارات مميزة
+</h2>
+
+<p>
+أفضل العقارات التجارية والإدارية
+</p>
+
+</div>
+
+
+<div class="properties">
+
+
+<div class="property">
+
+<div class="property-icon">
+🏢
+</div>
+
+<h3>
+مكتب إداري مميز
+</h3>
+
+<p>
+📍 القاهرة الجديدة - التجمع الخامس
+</p>
+
+<p>
+📐 المساحة: 180 متر
+</p>
+
+<div class="price">
+5,500,000 جنيه
+</div>
+
+<button class="add-button">
+تواصل مع المعلن
+</button>
+
+</div>
+
+
+<div class="property">
+
+<div class="property-icon">
+🏪
+</div>
+
+<h3>
+محل تجاري
+</h3>
+
+<p>
+📍 العاصمة الإدارية الجديدة
+</p>
+
+<p>
+📐 المساحة: 120 متر
+</p>
+
+<div class="price">
+80,000 جنيه شهريًا
+</div>
+
+<button class="add-button">
+تواصل مع المعلن
+</button>
+
+</div>
+
+
+<div class="property">
+
+<div class="property-icon">
+🏥
+</div>
+
+<h3>
+عيادة طبية
+</h3>
+
+<p>
+📍 الشيخ زايد - الجيزة
+</p>
+
+<p>
+📐 المساحة: 100 متر
+</p>
+
+<div class="price">
+35,000 جنيه شهريًا
+</div>
+
+<button class="add-button">
+تواصل مع المعلن
+</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+
 <footer>
-  <h3>Real Estate Hub</h3>
-  <p>منصة العقارات التجارية والإدارية في مصر</p>
-  <p>© 2026 جميع الحقوق محفوظة</p>
+
+<h3>
+Real Estate Hub
+</h3>
+
+<p>
+منصة العقارات التجارية والإدارية في مصر
+</p>
+
+<p>
+© 2026 جميع الحقوق محفوظة
+</p>
+
 </footer>
+
 
 <script>
 
-function showForm() {
-  document.getElementById("add").style.display = "block";
+function searchProperty() {
 
-  window.location.href = "#add";
+alert("سيتم تفعيل البحث عن العقارات قريبًا");
+
 }
 
+
 function submitProperty() {
-  alert("تم إرسال بيانات العقار للمراجعة بنجاح");
+
+alert("تم إرسال العقار للمراجعة بنجاح");
+
 }
 
 </script>
 
+
 </body>
+
 </html>
