@@ -359,3 +359,131 @@ footer {
 }
 </style>
 </head>
+<body>
+
+<header>
+  <h1>Real Estate Hub</h1>
+  <p>منصة متخصصة في العقارات التجارية والإدارية في مصر</p>
+
+  <nav>
+    <a href="#properties">العقارات</a>
+    <a href="#add">أضف عقارك</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>ابحث عن عقارك التجاري أو الإداري</h2>
+  <p>محلات - مكاتب - عيادات - وحدات تجارية وإدارية</p>
+
+  <button class="add-property" onclick="showForm()">
+    + أضف عقارك
+  </button>
+</section>
+
+<div class="container">
+
+  <div id="add" class="form-box">
+
+    <h2>أضف عقارك</h2>
+
+    <label>نوع العقار</label>
+
+    <select>
+      <option>اختر نوع العقار</option>
+      <option>مكتب إداري</option>
+      <option>محل تجاري</option>
+      <option>عيادة</option>
+      <option>وحدة تجارية</option>
+    </select>
+
+    <label>نوع العملية</label>
+
+    <select>
+      <option>للبيع</option>
+      <option>للإيجار</option>
+    </select>
+
+    <label>المنطقة</label>
+
+    <input type="text" placeholder="مثال: التجمع الخامس">
+
+    <label>اسم المشروع</label>
+
+    <input type="text" placeholder="اسم المشروع">
+
+    <label>المساحة بالمتر</label>
+
+    <input type="number" placeholder="مثال: 150">
+
+    <label>السعر</label>
+
+    <input type="number" placeholder="السعر بالجنيه المصري">
+
+    <label>رقم الهاتف</label>
+
+    <input type="tel" placeholder="رقم الهاتف">
+
+    <label>تفاصيل العقار</label>
+
+    <textarea rows="5" placeholder="اكتب تفاصيل العقار"></textarea>
+
+    <button onclick="submitProperty()">
+      إرسال العقار للمراجعة
+    </button>
+
+  </div>
+
+  <h2 id="properties">العقارات المميزة</h2>
+
+  <div class="properties">
+
+    <div class="property">
+      <div class="icon">🏢</div>
+      <h3>مكتب إداري مميز</h3>
+      <p>📍 القاهرة الجديدة - التجمع الخامس</p>
+      <p>📐 المساحة: 180 متر</p>
+      <div class="price">5,500,000 جنيه</div>
+    </div>
+
+    <div class="property">
+      <div class="icon">🏪</div>
+      <h3>محل تجاري</h3>
+      <p>📍 العاصمة الإدارية الجديدة</p>
+      <p>📐 المساحة: 120 متر</p>
+      <div class="price">80,000 جنيه شهريًا</div>
+    </div>
+
+    <div class="property">
+      <div class="icon">🏥</div>
+      <h3>عيادة طبية</h3>
+      <p>📍 الشيخ زايد - الجيزة</p>
+      <p>📐 المساحة: 100 متر</p>
+      <div class="price">35,000 جنيه شهريًا</div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <h3>Real Estate Hub</h3>
+  <p>منصة العقارات التجارية والإدارية في مصر</p>
+  <p>© 2026 جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+
+function showForm() {
+  document.getElementById("add").style.display = "block";
+
+  window.location.href = "#add";
+}
+
+function submitProperty() {
+  alert("تم إرسال بيانات العقار للمراجعة بنجاح");
+}
+
+</script>
+
+</body>
+</html>
